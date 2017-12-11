@@ -27,5 +27,7 @@ Este repositorio es para conservar mis soluciones a medida que las vaya
 resolviendo.
 
  - [Day 04](./day04/) High-Entropy Passphrases
+ 
+ - [Day 05](./day05/) A Maze of Twisty Trampolines, All Alike
 
  - [Day 11](./day11/) Hex Ed
