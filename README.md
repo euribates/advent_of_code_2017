@@ -12,7 +12,7 @@ who is just learning to code
 Each puzzle calls upon different skills and has
 two parts that build on a theme.
 
-### Spanishi / Español
+### Spanish / Español
 
 El [Advent of code](https://adventofcode.com/) consiste en una serie de 
 pequeños puzzles de programación adecuados para varios niveles de experiencia. 
@@ -25,3 +25,7 @@ partes.
 
 Este repositorio es para conservar mis soluciones a medida que las vaya
 resolviendo.
+
+ - [Day 04](./day04/) High-Entropy Passphrases
+
+ - [Day 11](./day11/) Hex Ed
