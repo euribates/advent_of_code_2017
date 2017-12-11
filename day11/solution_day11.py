@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+# More info on hex girds as: <https://www.redblobgames.com/grids/hexagons/>
 class Vector:
     
     def __init__(self, x, y, z):
