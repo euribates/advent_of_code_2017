@@ -31,3 +31,5 @@ resolviendo.
  - [Day 05](./day05/) A Maze of Twisty Trampolines, All Alike
 
  - [Day 11](./day11/) Hex Ed
+
+ - [Day 12](./day12/) Digital Plumber
