@@ -30,6 +30,12 @@ resolviendo.
  
  - [Day 05](./day05/) A Maze of Twisty Trampolines, All Alike
 
+ - [Day 10](./day10/) Knot Hash
+
  - [Day 11](./day11/) Hex Ed
 
  - [Day 12](./day12/) Digital Plumber
+
+ - [Day 13](./day13/) Packet Scanners
+ 
+ - [Day 14](./day14/) Disk Defragmenttion 
