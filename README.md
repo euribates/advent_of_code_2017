@@ -26,6 +26,12 @@ partes.
 Este repositorio es para conservar mis soluciones a medida que las vaya
 resolviendo.
 
+ - [Day 01](./day01/) Inverse Captcha
+
+ - [Day 02](./day02/) Corruption Checksum
+
+ - [Day 03](./day03/) Spiral Memory 
+
  - [Day 04](./day04/) High-Entropy Passphrases
  
  - [Day 05](./day05/) A Maze of Twisty Trampolines, All Alike
@@ -42,3 +48,4 @@ resolviendo.
 
  - [Day 15](./day15/) Dueling Generators 
 
+ - [Day 16](./day16/) Permutation Promenade
