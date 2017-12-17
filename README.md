@@ -49,3 +49,5 @@ resolviendo.
  - [Day 15](./day15/) Dueling Generators 
 
  - [Day 16](./day16/) Permutation Promenade
+
+ - [Day 17](./day17/) Spinlock
