@@ -51,3 +51,6 @@ resolviendo.
  - [Day 16](./day16/) Permutation Promenade
 
  - [Day 17](./day17/) Spinlock
+
+ - [Day 18](./day18/) Duet
+
