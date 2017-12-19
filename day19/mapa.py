@@ -32,20 +32,21 @@ class Direction(Enum):
     SOUTH = 4
     WEST = 8
 
-    def oposite(d):
-        _map_oposites = {
+
+    def __neg__(self):  # So -NORTH == SOUTH. Pretty cool!
+        map_oposites = {
             Direction.NORTH: Direction.SOUTH,
             Direction.SOUTH: Direction.NORTH,
             Direction.EAST: Direction.WEST,
             Direction.WEST: Direction.EAST,
             }
-        return _map_oposites[d]
+        return map_oposites[self]
 
 # test
-assert Direction.oposite(Direction.NORTH) == Direction.SOUTH
-assert Direction.oposite(Direction.SOUTH) == Direction.NORTH
-assert Direction.oposite(Direction.EAST) == Direction.WEST
-assert Direction.oposite(Direction.WEST) == Direction.EAST
+assert -Direction.NORTH == Direction.SOUTH
+assert -Direction.SOUTH == Direction.NORTH
+assert -Direction.EAST == Direction.WEST
+assert -Direction.WEST == Direction.EAST
 
 
 def south(pos): return pos[0]+1, pos[1]
@@ -80,7 +81,7 @@ def next_pos(direction, pos):
 def find_new_direction(direction, pos):
     row, col = pos
     possible_directions = set(Direction)
-    possible_directions.discard(Direction.oposite(direction))  # No way back
+    possible_directions.discard(-direction)  # No way back
     for new_dir in possible_directions:
         r, c = next_pos(new_dir, pos)
         c = char_at_pos(r, c)
