@@ -8,16 +8,15 @@ def chop(l):
         l = l[:-1]
     return l
 
-with open('input.txt', 'r') as f:
-    lines = [chop(l) for l in f.readlines()]
+def load_map():
+    with open('input.txt', 'r') as f:
+        mm = [list(chop(l)) for l in f.readlines()]
+    return mm
 
-linemap = []
-for l in lines:
-    linemap.append(list(l))
+linemap = load_map()
 
 max_rows = len(linemap)
 max_cols = len(linemap[0])
-
 
 def char_at_pos(row, col):
     global linemap, max_rows, max_width
@@ -27,11 +26,11 @@ def char_at_pos(row, col):
         return None
 
 class Direction(Enum):
+
     NORTH = 1
     EAST = 2
     SOUTH = 4
     WEST = 8
-
 
     def __neg__(self):  # So -NORTH == SOUTH. Pretty cool!
         map_oposites = {
@@ -93,41 +92,51 @@ def find_new_direction(direction, pos):
         raise ValueError('No puedo seguir')
     return new_dir
 
-direction = Direction.SOUTH
-row = 0
-col = linemap[0].index('|')
-pos = (row, col)
-assert linemap[row][col] == '|'
+def find_path(verbose=True):
+    path = []
+    direction = Direction.SOUTH
+    row = 0
+    col = linemap[0].index('|')
+    pos = (row, col)
+    assert linemap[row][col] == '|'
+    found_letters = []
+    counter = 0
+    while True:
+        path.append(pos)
+        row, col = pos
+        c = linemap[row][col]
+        if verbose:
+            print('pos {},{} encuentro char {}'.format(row, col, c), end=' ')
+        
+        if c == ' ':
+            if verbose:
+                print('Encontrado')
+                print('found_letters:', ''.join(found_letters))
+                print('steps:', counter)
+            break
 
-found_letters = []
+        if c == '+':
+            direction = find_new_direction(direction, pos)
+            if verbose:
+                print('Cambio direccion: {}'.format(direction), end=' ')
+            pos = next_pos(direction, pos)
+            counter += 1
 
-counter = 0
-while True:
-    row, col = pos
-    c = linemap[row][col]
-    print('pos {},{} encuentro char {}'.format(row, col, c), end=' ')
-    
-    if c == ' ':
-        print('Encontrado')
-        print('found_letters:', ''.join(found_letters))
-        print('steps:', counter)
-        break
+        elif c in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
+            if verbose:
+                print('Añado letra "{}"'.format(c), end=' ')
+            found_letters.append(c)
+            pos = next_pos(direction, pos)
+            counter += 1
+        elif c == '|':
+            pos = next_pos(direction, pos)
+            counter += 1
+        elif c == '-':
+            pos = next_pos(direction, pos)
+            counter += 1
+        if verbose:
+            print('me dirijo a nueva pos', pos)
+    return path
 
-    if c == '+':
-        direction = find_new_direction(direction, pos)
-        print('Cambio direccion: {}'.format(direction), end=' ')
-        pos = next_pos(direction, pos)
-        counter += 1
-
-    elif c in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
-        print('Añado letra "{}"'.format(c), end=' ')
-        found_letters.append(c)
-        pos = next_pos(direction, pos)
-        counter += 1
-    elif c == '|':
-        pos = next_pos(direction, pos)
-        counter += 1
-    elif c == '-':
-        pos = next_pos(direction, pos)
-        counter += 1
-    print('me dirijo a nueva pos', pos)
+if __name__ == '__main__':
+    find_path()
