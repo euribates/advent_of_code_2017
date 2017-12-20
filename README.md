@@ -40,6 +40,8 @@ resolviendo.
 
  - [Day 08](./day08/) I Heard You Like Registers
 
+ - [Day 09](./day09/) Stream Processing
+
  - [Day 10](./day10/) Knot Hash
 
  - [Day 11](./day11/) Hex Ed
