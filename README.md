@@ -38,6 +38,8 @@ resolviendo.
 
  - [Day 07](./day07/) Recursive Circus
 
+ - [Day 08](./day08/) I Heard You Like Registers
+
  - [Day 10](./day10/) Knot Hash
 
  - [Day 11](./day11/) Hex Ed
