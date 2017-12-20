@@ -36,6 +36,8 @@ resolviendo.
  
  - [Day 05](./day05/) A Maze of Twisty Trampolines, All Alike
 
+ - [Day 07](./day07/) Recursive Circus
+
  - [Day 10](./day10/) Knot Hash
 
  - [Day 11](./day11/) Hex Ed
