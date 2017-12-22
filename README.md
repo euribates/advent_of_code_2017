@@ -26,6 +26,7 @@ partes.
 Este repositorio es para conservar mis soluciones a medida que las vaya
 resolviendo.
 
+ - [Day 21](./day22/) Sporifica Virus
  - [Day 21](./day21/) Fractal Art
  - [Day 20](./day20/) Particle Swarm
  - [Day 18](./day18/) Duet
