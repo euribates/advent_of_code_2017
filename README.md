@@ -26,6 +26,7 @@ partes.
 Este repositorio es para conservar mis soluciones a medida que las vaya
 resolviendo.
 
+ - [Day 25](./day25/) The Halting Problem
  - [Day 24](./day24/) Electromagnetic Moat
  - [Day 23](./day23/) Coprocessor Conflagration
  - [Day 22](./day22/) Sporifica Virus
