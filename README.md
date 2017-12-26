@@ -45,6 +45,7 @@ resolviendo.
  - [Day 09](./day09/) Stream Processing
  - [Day 08](./day08/) I Heard You Like Registers
  - [Day 07](./day07/) Recursive Circus
+ - [Day 06](./day06/) Memory Reallocation 
  - [Day 05](./day05/) A Maze of Twisty Trampolines, All Alike
  - [Day 04](./day04/) High-Entropy Passphrases
  - [Day 03](./day03/) Spiral Memory 
